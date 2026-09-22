@@ -51,7 +51,7 @@
         <a href="assets/framework.webp" target="_blank" rel="noopener noreferrer" aria-label="View the PreQ framework at full resolution" title="View full-resolution image">
           <img src="assets/framework.webp" width="2600" height="1254" alt="PreQ framework: ASR and CTC evidence feed a word-presence branch; ASR, GOP, CTC, and HuBERT evidence feed a pronunciation-quality branch. Presence representations correct utterance-level scores, alongside phoneme- and word-level quality predictions." loading="lazy" decoding="async">
         </a>
-        <figcaption>PreQ first estimates word presence, then assesses pronunciation at the phoneme, word, and utterance levels. Presence representations refine utterance-level scores, while omitted words are excluded from word- and phoneme-level quality supervision.</figcaption>
+        <figcaption>PreQ explicitly models word presence before pronunciation quality. Presence information guides pronunciation assessment at the phoneme, word, and utterance levels: omitted words are masked from phoneme- and word-level quality supervision, while presence-aware representations are incorporated into utterance-level scoring.</figcaption>
       </figure>
     </section>
 
