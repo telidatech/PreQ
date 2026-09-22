@@ -1,0 +1,104 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f8f7f4;
+  background-image: linear-gradient(180deg, #dce1e4 0, #eef0ef 330px, #f8f7f4 720px);
+  background-repeat: no-repeat;
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+main {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 64px 30px 72px;
+}
+header { text-align: center; }
+h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.6px;
+  text-wrap: balance;
+}
+.title-main { display: block; }
+.title-subtitle { display: block; margin-top: 4px; }
+a { color: #1766ad; text-decoration: none; }
+a[href]:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid #1766ad; outline-offset: 4px; }
+.authors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 6px 19px;
+  margin: 25px 0 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.authors > span { white-space: nowrap; }
+.authors a:not([href]) { color: inherit; }
+.authors sup { position: relative; top: -0.55em; vertical-align: baseline; font-size: 0.65em; line-height: 0; margin-left: 1px; }
+.affiliation { margin: 9px 0 0; color: #4f4f4c; font-size: 14px; line-height: 1.6; }
+.notes { margin: 8px 0 0; color: #666; font-size: 12px; line-height: 1.8; }
+.notes > span { margin-left: 10px; }
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  font-size: 14px;
+}
+.links a { display: inline-flex; justify-content: center; align-items: center; gap: 7px; min-height: 40px; padding: 7px 16px; border: 1px solid #d9d6ce; border-radius: 24px; background: #fffdf9; color: #343a40; white-space: nowrap; }
+.links a[href]:hover { background: #fff; border-color: #a9adb1; text-decoration: none; }
+.resource-icon { width: 17px; height: 17px; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.github-icon { fill: currentColor; stroke: none; }
+.website-icon { width: 22px; height: 22px; object-fit: contain; }
+.links a[aria-disabled="true"] { color: #777871; background: #f1efe9; cursor: default; }
+section { max-width: 780px; margin: 44px auto 0; }
+h2 { margin: 0 0 16px; font-size: 22px; font-weight: 600; letter-spacing: -0.3px; }
+section p { margin: 0; color: #343434; font-size: 16px; line-height: 1.8; }
+.abstract p { text-align: justify; hyphens: auto; }
+.framework { max-width: 780px; margin-top: 44px; }
+figure { margin: 20px 0 0; }
+figure > a { display: block; padding: 12px; background: #fff; border: 1px solid #e1ded7; border-radius: 4px; cursor: zoom-in; }
+figure img { display: block; width: 100%; height: auto; }
+figcaption { margin: 16px 0 0; color: #555550; font-size: 14px; line-height: 1.8; text-align: left; }
+.platform { padding-top: 30px; border-top: 1px solid #dfdfd8; }
+.platform-heading { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.platform-heading img { display: block; width: 42px; height: 42px; flex-shrink: 0; }
+.platform-heading h2 { margin: 0; }
+.platform-heading h2 span { white-space: nowrap; }
+.platform p { text-align: justify; hyphens: auto; }
+.platform p + p { margin-top: 12px; }
+.platform strong { font-weight: 600; }
+.platform-link { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 44px; margin-top: 22px; padding: 10px 20px; border: 1px solid #d7c9ee; border-radius: 24px; background: #eee8fa; color: #664398; font-size: 14px; font-weight: 600; line-height: 1.5; }
+.platform-link[href]:hover { background: #e5daf5; border-color: #bfa7e0; color: #553482; text-decoration: none; }
+.platform-link:focus-visible { outline-color: #7957aa; }
+.platform-link svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 600px) {
+  main { padding: 40px 24px 50px; }
+  h1 { font-size: 26px; line-height: 1.35; letter-spacing: -0.4px; }
+  .authors { margin-top: 23px; font-size: 14px; gap: 5px 15px; }
+  .affiliation { font-size: 13px; }
+  .notes { font-size: 11px; }
+  .notes > span { display: block; margin: 0; }
+  .links { gap: 8px; font-size: 13px; }
+  .links a { gap: 5px; padding: 7px 10px; }
+  .resource-icon { width: 15px; height: 15px; }
+  .website-icon { width: 20px; height: 20px; }
+  section { margin-top: 40px; }
+  h2 { font-size: 21px; }
+  section p { font-size: 15px; line-height: 1.8; }
+  .framework { margin-top: 36px; }
+  figure > a { padding: 8px; }
+  figcaption { font-size: 13px; margin-top: 14px; }
+  .platform { padding-top: 25px; }
+  .platform-heading { gap: 10px; }
+  .platform-heading img { width: 36px; height: 36px; }
+  .platform-link { font-size: 14px; }
+}

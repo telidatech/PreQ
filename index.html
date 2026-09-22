@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="PreQ: Presence before Quality for Omission-Aware Pronunciation Assessment.">
+  <title>PreQ: Presence before Quality for Omission-Aware Pronunciation Assessment</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css?v=waxueshe-7">
+  <script src="site-config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1><span class="title-main">PreQ: Presence before Quality</span> <span class="title-subtitle">for Omission-Aware Pronunciation Assessment</span></h1>
+      <p class="authors">
+        <span><a data-author="tong">Tong Wang</a><sup>*</sup></span>
+        <span><a data-author="fusen">Fusen Zhang</a><sup>*</sup></span>
+        <span><a data-author="si">Si Chen</a></span>
+        <span><a data-author="lijie">Lijie Jia</a></span>
+        <span><a data-author="yide">Yide Tang</a></span>
+        <span><a data-author="zhiwei">Zhiwei Wang</a><sup>†</sup></span>
+      </p>
+      <p class="affiliation">Henan Telida Network Technology Co., Ltd., Zhengzhou, China</p>
+      <p class="notes">* Equal contribution. <span>† Corresponding author: <a data-link="contact" href="mailto:wangzhiwei@telidatech.cn">wangzhiwei@telidatech.cn</a></span></p>
+      <nav class="links" aria-label="Project links">
+        <a data-link="paper" role="link" aria-disabled="true" title="Link to be added">
+          <svg class="resource-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
+          <span>Paper</span>
+        </a>
+        <a data-link="code" role="link" aria-disabled="true" title="Link to be added">
+          <svg class="resource-icon github-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297C5.37.297 0 5.67 0 12.297c0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.043-1.61-4.043-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.838 1.237 1.838 1.237 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.605-2.665-.3-5.466-1.333-5.466-5.93 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.52 11.52 0 0 1 12 6.099c1.02.005 2.045.138 3.003.404 2.291-1.552 3.297-1.23 3.297-1.23.654 1.652.243 2.873.12 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.805 5.625-5.479 5.921.43.371.823 1.102.823 2.222 0 1.606-.015 2.898-.015 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          <span>GitHub</span>
+        </a>
+        <a data-link="demo" href="https://www.waxueshe.com" target="_blank" rel="noopener noreferrer" aria-label="哇学社 — live demo">
+          <img class="website-icon" src="assets/waxueshe.png" width="24" height="24" alt="">
+          <span lang="zh-CN">哇学社</span>
+        </a>
+      </nav>
+    </header>
+
+    <section class="abstract" aria-labelledby="abstract-heading">
+      <h2 id="abstract-heading">Abstract</h2>
+      <p>Automatic pronunciation assessment aims to provide accurate and interpretable feedback on learners’ speech. However, existing pronunciation assessment methods often conflate word presence with pronunciation quality, leading to misleading feedback for omitted words. We propose PreQ, a presence-before-quality framework that explicitly decouples word presence from pronunciation quality. PreQ first estimates word presence from multi-source acoustic and phonetic evidence and then incorporates presence information into pronunciation assessment. Experiments on SpeechOcean762 and MPS show that PreQ achieves strong word omission detection and competitive multi-granularity pronunciation assessment performance. PreQ has been deployed online at <a data-link="demo" href="https://www.waxueshe.com" target="_blank" rel="noopener noreferrer">www.waxueshe.com</a>.</p>
+    </section>
+
+    <section class="framework" aria-labelledby="framework-heading">
+      <h2 id="framework-heading">Framework</h2>
+      <figure>
+        <a href="assets/framework.webp" target="_blank" rel="noopener noreferrer" aria-label="View the PreQ framework at full resolution" title="View full-resolution image">
+          <img src="assets/framework.webp" width="2600" height="1254" alt="PreQ framework: ASR and CTC evidence feed a word-presence branch; ASR, GOP, CTC, and HuBERT evidence feed a pronunciation-quality branch. Presence representations correct utterance-level scores, alongside phoneme- and word-level quality predictions." loading="lazy" decoding="async">
+        </a>
+        <figcaption>PreQ first estimates word presence, then assesses pronunciation at the phoneme, word, and utterance levels. Presence representations refine utterance-level scores, while omitted words are excluded from word- and phoneme-level quality supervision.</figcaption>
+      </figure>
+    </section>
+
+    <section id="waxueshe" class="platform" aria-labelledby="waxueshe-heading">
+      <div class="platform-heading">
+        <img src="assets/waxueshe.png" width="42" height="42" alt="" loading="lazy">
+        <h2 id="waxueshe-heading">Waxueshe <span lang="zh-CN">· 哇学社</span></h2>
+      </div>
+      <p>Waxueshe is a gamified English-learning platform that combines vocabulary, grammar, and speaking practice through activities such as word-order puzzles, fill-in-the-blank exercises, reading aloud, and dictation.</p>
+      <p><strong>PreQ powers all word- and sentence-level pronunciation scoring on Waxueshe.</strong> During speaking practice, it identifies whether each expected word is spoken and evaluates pronunciation quality separately. By distinguishing omissions from mispronunciations, PreQ delivers more accurate and informative sentence-level pronunciation scores.</p>
+      <a class="platform-link" data-link="demo" href="https://www.waxueshe.com" target="_blank" rel="noopener noreferrer">
+        <span>Explore Waxueshe</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
